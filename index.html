@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="imgs/logo.png" />
+    <title>Yummy kkkkk</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="">
+    <!-- left nav start -->
+    <div class="left-nav vh-100 position-fixed d-flex">
+      <div
+        class="tabs d-flex flex-column justify-content-between text-white p-4"
+      >
+        <div class="links">
+          <ul class="list-unstyled p-0">
+            <li class="mb-3" id="search">Search</li>
+            <li class="mb-3" id="categoriesBtn">Categories</li>
+            <li class="mb-3" id="areaBtn">Area</li>
+            <li class="mb-3" id="ingredientsBtn">Ingredients</li>
+            <li id="contactBtn">Contact Us</li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <div class="icons d-flex">
+            <i class="fa-brands fa-facebook me-1"></i>
+            <i class="fa-brands fa-twitter me-1"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <p class="mt-1">Copyright Â© 2019 All Rights Reserved.</p>
+        </div>
+      </div>
+      <div
+        class="open-bar d-flex flex-column justify-content-between align-items-center"
+      >
+        <img src="imgs/logo.png" class="w-100" alt="logo" />
+        <i class="bar-btn fa-solid fa-bars fa-2x"></i>
+        <i class="bar-btn fa-solid fa-x fa-2x fw-light d-none"></i>
+        <div class="icons d-flex flex-column">
+          <i class="fa-solid fa-globe mb-1"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div>
+    <!-- left nav end -->
+
+    <!-- home on load section -->
+    <section id="homeOnLoad" class="">
+      <div class="container mb-4">
+        <div class="row gap-0"></div>
+      </div>
+    </section>
+    <div class="meal-details" class="d-none">
+      <div class="container text-white">
+        <div class="row py-5 g-4" id="rowData"></div>
+      </div>
+    </div>
+    <!-- home on load section -->
+
+    <section id="searchForFood" class="d-none">
+      <div class="container">
+        <div class="inputFields w-100 d-flex justify-content-evenly">
+          <input type="text" class="form-control w-45 mt-3 bg-transparent text-white" id="ByName" placeholder="Search By Name">
+          <input maxlength="1" type="text" class="form-control w-45 mt-3 bg-transparent text-white" id="ByFirstLetter" placeholder="Search By First Letter">
+        </div>
+        <div class="row gap-0"></div>
+      </div>
+    </section>
+
+
+    <!-- categories start -->
+    <section id="categories" class="d-none">
+      <div class="container">
+          <div class="row gap-0"></div>
+      </div>
+    </section>
+    <!-- categories end -->
+
+
+    <!-- Area start -->
+    <section id="area" class="d-none">
+        <div class="container">
+            <div class="row">
+              
+            </div>
+        </div>
+    </section>
+    <!-- Area end -->
+    
+    <!-- ingrediants start -->
+    <section id="ingrediants" class="d-none">
+        <div class="container">
+            <div class="row"></div>
+        </div>
+    </section>
+    <!-- ingrediants end -->
+
+    <!-- contact start -->
+    <div class="contact min-vh-100 d-flex justify-content-center align-items-center d-none">
+      <div class="container w-75 text-center">
+          <div class="row g-4">
+              <div class="col-md-6">
+                  <input id="nameInput" onkeyup="inputsValidation()" type="text" class="form-control" placeholder="Enter Your Name">
+                  <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                      Special characters and numbers not allowed
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <input id="emailInput" onkeyup="inputsValidation()" type="email" class="form-control " placeholder="Enter Your Email">
+                  <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                      Email not valid *exemple@yyy.zzz
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <input id="phoneInput" onkeyup="inputsValidation()" type="text" class="form-control " placeholder="Enter Your Phone">
+                  <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                      Enter valid Phone Number
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <input id="ageInput" onkeyup="inputsValidation()" type="number" class="form-control " placeholder="Enter Your Age">
+                  <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                      Enter valid age
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <input  id="passwordInput" onkeyup="inputsValidation()" type="password" class="form-control " placeholder="Enter Your Password">
+                  <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                      Enter valid password *Minimum eight characters, at least one letter and one number:*
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <input  id="repasswordInput" onkeyup="inputsValidation()" type="password" class="form-control " placeholder="Repassword">
+                  <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                      Enter valid repassword 
+                  </div>
+              </div>
+          </div>
+          <button id="submitBtn" disabled class="btn btn-outline-danger px-2 mt-3">Submit</button>
+      </div>
+  </div>
+    <!-- contact end -->
+    
+    <!-- loading screen start -->
+    <div class="lds-spinner w-100 h-100 d-none">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <!-- loading screen end -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
